@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsmux"
+version = "0.1.0"
+description = "Workspace launcher — open/close entire project environments with one command"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    {name = "Safeer"},
+]
+keywords = ["workspace", "launcher", "macos", "productivity", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Desktop Environment",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+mux = "wsmux.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/safeersoft/wsmux"
+Repository = "https://github.com/safeersoft/wsmux"
+Issues = "https://github.com/safeersoft/wsmux/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
